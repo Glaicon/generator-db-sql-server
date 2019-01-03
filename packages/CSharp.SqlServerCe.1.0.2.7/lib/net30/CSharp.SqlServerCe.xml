@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSharp.SqlServerCe</name>
+    </assembly>
+    <members>
+        <member name="T:CSharp.SqlServerCe.Parameter">
+            <summary>
+            Sql Parameter
+            </summary>
+        </member>
+        <member name="T:CSharp.SqlServerCe.SqlServerCeHelper">
+            <summary>
+            SqlCeHelper
+            </summary>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.PackingParameters(CSharp.SqlServerCe.Parameter,System.Data.SqlServerCe.SqlCeCommand)">
+            <summary>
+            Packing parameters
+            </summary>
+            <param name="parameters">array of SqlCeParamters</param>
+            <param name="cmd">SqlCeCommand object</param>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.GetParameter(System.String,System.Object,System.Data.SqlServerCe.SqlCeCommand)">
+            <summary>
+            Packing parameter object
+            </summary>
+            <param name="paramName">parameter name</param>
+            <param name="paramValue">parameter value</param>
+            <param name="cmd">SqlCeCommand object</param>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteConnect(System.String)">
+            <summary>
+            DataBase connection
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteConnect">
+            <summary>
+            DataBase connection
+            </summary>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteNonQuery(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand (that returns no resultset) against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteNonQuery(System.String,System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand (that returns no resultset) against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteNonQuery(System.String,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand (that returns no resultset) against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteNonQuery(System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand (that returns no resultset) against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteScalar(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns the first column of the first record against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteScalar(System.String,System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns the first column of the first record against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteScalar(System.String,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns the first column of the first record against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteScalar(System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns the first column of the first record against the database specified in the connection string 
+            using the provided parameters.
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>An object that should be converted to the expected type using Convert.To{Type}</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteReader(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A SqlCeDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteReader(System.String,System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A SqlCeDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteReader(System.String,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A SqlCeDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.ExecuteReader(System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            Execute a SqlCeCommand that returns a resultset against the database specified in the connection string 
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>A SqlCeDataReader containing the results</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataTable(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataTable(System.String,System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataTable(System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataTable(System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataTable object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataTable object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataSet(System.String,System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataSet(System.String,System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlCeConnection</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataSet(System.String,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+        <member name="M:CSharp.SqlServerCe.SqlServerCeHelper.FillDataSet(System.String,CSharp.SqlServerCe.Parameter,System.Data.CommandType)">
+            <summary>
+            DataBase data fill DataSet object
+            </summary>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParams">paramters</param>
+            <param name="commandType">the CommandType (stored procedure, text, etc.)</param>
+            <returns>DataSet object</returns>
+        </member>
+    </members>
+</doc>
